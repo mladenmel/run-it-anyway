@@ -23,30 +23,87 @@
 
   <main>
     <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Automotive Content Brand</p>
-          <div class="hero-logo-wrap">
-            <img class="hero-logo" src="logo.svg" alt="Run It Anyway logo">
+      <div class="hero-overlay"></div>
+      <div class="container hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Automotive Content Brand</p>
+            <div class="hero-logo-wrap">
+              <img class="hero-logo" src="logo.svg" alt="Run It Anyway logo">
+            </div>
+            <h1>Real cars, real opinions, and builds that actually mean something.</h1>
+            <p class="lead">
+              Run It Anyway is where I share the cars I am around, the ones I drive,
+              and the projects I keep coming back to. The goal is simple: good visuals,
+              honest thoughts, and content that feels real to people who are actually into cars.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="content.html">View Content</a>
+              <a class="button button-secondary" href="about.html">About The Brand</a>
+            </div>
           </div>
-          <p class="lead">
-            A personal automotive brand focused on real-world car features, honest reviews,
-            and creative builds that show the style, story, and personality behind each project.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="content.html">View Content</a>
-            <a class="button button-secondary" href="about.html">Learn More</a>
-          </div>
+
+          <aside class="hero-side-card" aria-label="Brand focus">
+            <p class="feature-label">Brand Focus</p>
+            <div class="stat-list">
+              <div class="stat-item">
+                <span class="stat-number">01</span>
+                <p>Spotlighting dealership cars that deserve a closer look.</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">02</span>
+                <p>Reviews that get straight to the point without trying too hard.</p>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">03</span>
+                <p>Build updates that show the work, the setbacks, and the payoff.</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured</p>
+          <h2>A few of the cars and projects that best represent the brand right now.</h2>
         </div>
 
-        <div class="feature-panel">
-          <div class="media-placeholder">
-            <span>Featured Image / Video</span>
-          </div>
-          <div class="feature-meta">
-            <p class="feature-label">Current Highlight</p>
-            <h2>Showcasing cars, reviews, and builds in one clean portfolio.</h2>
-          </div>
+        <div class="feature-card-grid">
+          <article class="feature-card">
+            <div class="feature-card-media build-shot">
+              <span>Featured Build</span>
+            </div>
+            <div class="feature-card-copy">
+              <p class="feature-label">Featured Build</p>
+              <h3>2006 Volkswagen GTI</h3>
+              <p>A proper project car with character. The kind of build that keeps changing, keeps teaching, and never really feels finished.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media review-shot">
+              <span>Review Highlight</span>
+            </div>
+            <div class="feature-card-copy">
+              <p class="feature-label">Review Highlight</p>
+              <h3>BMW M3</h3>
+              <p>A performance icon that gives plenty to talk about, from the way it looks to the way it delivers when you actually drive it.</p>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-card-media dealer-shot">
+              <span>Dealership Feature</span>
+            </div>
+            <div class="feature-card-copy">
+              <p class="feature-label">Dealership Feature</p>
+              <h3>Audi RS6</h3>
+              <p>One of those dealership cars that stops you in your tracks right away and deserves more than a quick walk past on the lot.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -54,32 +111,63 @@
     <section class="summary-section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">What This Site Covers</p>
-          <h2>Automotive content with a clear, student-friendly presentation.</h2>
+          <p class="eyebrow">Content Preview</p>
+          <h2>The site is built around three things I spend the most time shooting, driving, and talking about.</h2>
         </div>
 
         <div class="card-grid">
           <article class="info-card">
             <h3>Dealership Cars</h3>
-            <p>Walkarounds and feature spotlights on cars seen in dealership settings.</p>
+            <p>Walkarounds and quick features on cars that stand out in person, whether it is the spec, the shape, or just the overall presence.</p>
           </article>
           <article class="info-card">
             <h3>Car Reviews</h3>
-            <p>Simple, honest impressions focused on styling, performance, and everyday feel.</p>
+            <p>My take on how a car actually feels, how it looks, and whether it lives up to the name behind it.</p>
           </article>
           <article class="info-card">
             <h3>Builds / Projects</h3>
-            <p>Progress updates and creative ideas behind custom automotive projects.</p>
+            <p>The project side of the brand, where the best stories usually come from the cars that still need work.</p>
           </article>
+        </div>
+
+        <div class="section-actions">
+          <a class="button button-secondary" href="content.html">Explore Content</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-wrap">
-      <p class="footer-brand">Run It Anyway</p>
-      <p>Automotive portfolio and personal brand website.</p>
+    <div class="container footer-shell">
+      <div class="footer-main">
+        <div class="footer-brand-block">
+          <p class="footer-brand">Run It Anyway</p>
+          <p class="footer-description">Automotive content focused on real cars, honest reviews, and builds with personality.</p>
+        </div>
+
+        <div class="footer-links-group">
+          <p class="footer-heading">Navigation</p>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="content.html">Content</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <p class="footer-heading">Social</p>
+          <div class="footer-links">
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer">TikTok</a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Run It Anyway. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 </body>
