@@ -120,6 +120,10 @@ img {
   padding: var(--section-space-tight) 0 2.75rem;
 }
 
+.page-hero {
+  padding-bottom: 2.25rem;
+}
+
 .hero {
   position: relative;
   padding: 0;
@@ -210,6 +214,10 @@ p {
   font-size: 1.02rem;
 }
 
+p + p {
+  margin-top: 1rem;
+}
+
 .lead {
   max-width: 62ch;
   margin-top: 1.3rem;
@@ -234,6 +242,24 @@ p {
   padding: calc(var(--panel-padding) + 0.05rem);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
+}
+
+.page-hero-card {
+  position: relative;
+  padding: calc(var(--panel-padding) + 0.2rem);
+  background: linear-gradient(180deg, rgba(15, 19, 20, 0.86), rgba(11, 15, 16, 0.92));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.page-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--border-soft);
+  pointer-events: none;
 }
 
 .stat-list {
@@ -358,6 +384,61 @@ p {
   pointer-events: none;
 }
 
+.section-visual {
+  min-height: 190px;
+  margin: calc(var(--panel-padding) * -1) calc(var(--panel-padding) * -1) 1.25rem;
+  border-radius: calc(var(--radius-lg) - 2px) calc(var(--radius-lg) - 2px) 0 0;
+  border-bottom: 1px solid var(--border-soft);
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.14), rgba(7, 10, 11, 0.44)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(0, 0, 0, 0.03) 10px,
+      rgba(0, 0, 0, 0.03) 20px
+    );
+}
+
+.visual-about-one {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.16), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.2), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #101518 0%, #26343a 44%, #121617 100%);
+}
+
+.visual-about-two {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.16), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #111516 0%, #2a312b 44%, #111516 100%);
+}
+
+.visual-preview-one {
+  min-height: 155px;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.16), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #111517 0%, #2f3538 44%, #111416 100%);
+}
+
+.visual-preview-two {
+  min-height: 155px;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.16), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #101417 0%, #22303a 44%, #111417 100%);
+}
+
+.visual-preview-three {
+  min-height: 155px;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.16), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #101415 0%, #28312c 44%, #111516 100%);
+}
+
 .media-placeholder,
 .content-card-media,
 .feature-card-media {
@@ -401,6 +482,14 @@ p {
   padding: var(--section-space) 0;
 }
 
+.featured-section {
+  padding-bottom: 4.25rem;
+}
+
+.summary-section {
+  padding-top: 4.25rem;
+}
+
 .section-heading {
   display: grid;
   gap: 0.9rem;
@@ -415,6 +504,11 @@ p {
   margin-top: 0.95rem;
 }
 
+.panel > .eyebrow + h2,
+.showcase-heading .eyebrow + h2 {
+  margin-bottom: 0.1rem;
+}
+
 .feature-card-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -423,10 +517,14 @@ p {
 
 .feature-card {
   overflow: hidden;
+  display: grid;
+  grid-template-rows: 215px 1fr;
+  background: linear-gradient(180deg, rgba(18, 24, 23, 0.96), rgba(12, 16, 17, 0.98));
 }
 
 .feature-card-media {
   min-height: 215px;
+  border-bottom: 1px solid var(--border-soft);
 }
 
 .build-shot {
@@ -461,8 +559,35 @@ p {
   background: linear-gradient(180deg, rgba(18, 24, 23, 0.96), rgba(12, 16, 17, 0.98));
 }
 
+.feature-card-copy,
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feature-card-copy p:last-child,
+.info-card p:last-child {
+  margin-top: 0.15rem;
+}
+
 .section-actions {
   margin-top: 2.25rem;
+}
+
+.summary-section .section-heading {
+  margin-bottom: 1.85rem;
+}
+
+.summary-section .info-card {
+  padding-top: 1.5rem;
+  padding-bottom: 1.55rem;
+}
+
+.summary-section .section-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.9rem;
 }
 
 .page-main {
@@ -514,7 +639,7 @@ p {
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
 }
 
@@ -537,7 +662,7 @@ p {
 .portfolio-card-media {
   display: grid;
   place-items: center;
-  min-height: 220px;
+  min-height: 240px;
   padding: 1rem;
   background:
     linear-gradient(180deg, rgba(7, 10, 11, 0.14), rgba(7, 10, 11, 0.38)),
@@ -553,6 +678,48 @@ p {
   font-family: "Trebuchet MS", "Segoe UI", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.media-dealer-one {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.2), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #121719 0%, #2d3438 42%, #131617 100%);
+}
+
+.media-dealer-two {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #101417 0%, #21292d 42%, #121516 100%);
+}
+
+.media-review-one {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.2), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #111517 0%, #233038 42%, #111417 100%);
+}
+
+.media-review-two {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #101516 0%, #1d2a2c 42%, #101415 100%);
+}
+
+.media-build-one {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.2), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #0f1415 0%, #26312d 42%, #111516 100%);
+}
+
+.media-build-two {
+  background:
+    linear-gradient(180deg, rgba(7, 10, 11, 0.12), rgba(7, 10, 11, 0.46)),
+    linear-gradient(135deg, rgba(69, 214, 154, 0.18), rgba(255, 255, 255, 0.02)),
+    linear-gradient(120deg, #111516 0%, #2b2d26 42%, #111516 100%);
 }
 
 .portfolio-card-copy {
@@ -574,6 +741,40 @@ p {
 
 .panel-intro {
   margin: 1rem 0 0;
+}
+
+.contact-details {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1.5rem;
+}
+
+.contact-item {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem 1.05rem;
+  background: linear-gradient(180deg, rgba(18, 24, 23, 0.96), rgba(12, 16, 17, 0.98));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  color: var(--text);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 1.05rem;
+}
+
+.contact-value:hover,
+.contact-value:focus-visible {
+  color: var(--accent);
 }
 
 .social-grid {
@@ -747,6 +948,10 @@ p {
     padding-top: 3.6rem;
   }
 
+  .page-hero-card {
+    padding: 1.35rem;
+  }
+
   .hero-shell {
     padding: 4.35rem 0 3.9rem;
   }
@@ -804,6 +1009,10 @@ p {
   .hero-side-card,
   .portfolio-card-copy {
     padding: 1.25rem;
+  }
+
+  .section-visual {
+    margin: -1.25rem -1.25rem 1rem;
   }
 
   .showcase-stack {
